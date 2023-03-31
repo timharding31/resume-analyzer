@@ -2,9 +2,7 @@
 	path = client
 	url = https://github.com/timharding31/resume-analyzer-client.git
 	branch = main
-		ignore = all
 [submodule "api"]
 	path = api
 	url = https://github.com/timharding31/resume-analyzer-api.git
 	branch = main
-		ignore = all
