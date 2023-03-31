@@ -1,0 +1,15 @@
+{
+  "name": "resume-analyzer",
+  "version": "1.0.0",
+  "repository": "https://github.com/timharding31/resume-analyzer.git",
+  "license": "MIT",
+  "scripts": {
+    "dev:api": "cd $INIT_CWD/api && uvicorn main:application --reload",
+    "dev:client": "cd $INIT_CWD/client && yarn && yarn dev",
+    "dev": "concurrently \"yarn dev:api\" \"yarn dev:client\"",
+    "deploy": "cd $INIT_CWD/client && yarn build && cd $INIT_CWD && gcloud app deploy --project th-resume-analyzer client/client.yaml api/api.yaml dispatch.yaml"
+  },
+  "dependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
